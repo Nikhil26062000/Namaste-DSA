@@ -1,0 +1,1 @@
+// write a program to find the second largest number in an array
