@@ -13,5 +13,8 @@ const smallestNumberInArray = (arr) => {
     return smallest;
 }
 let arr = [3, 5, 7, 2, 8, 1];
+let arr2 = [-3, -5, -7, -2, -8, -1];
 const result = smallestNumberInArray(arr);
 console.log("The smallest number in the array is: " + result);
+const result2 = smallestNumberInArray(arr2);
+console.log("The smallest number in the second array is: " + result2);
