@@ -22,3 +22,38 @@ var merge = function(nums1, m, nums2, n) {
         }
     }
 };
+
+
+// second solution with time complexity of O(m+n) and space complexity of O(1)
+
+/**
+ * @param {number[]} nums1
+ * @param {number} m
+ * @param {number[]} nums2
+ * @param {number} n
+ * @return {void} Do not return anything, modify nums1 in-place instead.
+ */
+var merge = function(nums1, m, nums2, n) {
+    let i = (m + n) - 1;
+    let p1 = m - 1; //undefined
+    let p2 = n-1; // 0
+    while(p1 >= 0 && p2 >= 0 ){
+        if(nums2[p2] >= nums1[p1]){
+            nums1[i] = nums2[p2];
+            p2--;
+            i--;
+            
+        }else{
+            nums1[i] = nums1[p1];
+            p1--;
+            i--
+        }
+    }
+
+    while(p2>=0){
+        nums1[i] = nums2[p2];
+        p2--;
+        i--;
+    }
+
+};
